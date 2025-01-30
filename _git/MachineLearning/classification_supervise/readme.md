@@ -140,9 +140,34 @@ df_dummies = pd.get_dummies(donnees, columns=variableQualitatives, drop_first=Tr
 
 
 
+# Champignons 
+
+1.    Lisez le jeu de données des champignons.
+
+>ok
 
 
+2.    Découpez le jeu de données en trois parties :
+        1. Validation 1024 individus 
+        2. Test 1024 individus
+        3. Apprentissage les autres individus du jeu.
 
 
+>ok
 
 
+3.    Exécutez l’ensemble des classificateurs du dictionnaire à l’aide de la fonction :
+                    initDictionnaireClassificateurs(arbres=128) avec les données initiales.
+
+>ok
+
+
+4.    Transformez les modalités de colonnes qualitatives en colonnes. (Toutes les colonnes sont des variables qualitatives)
+
+>ok
+
+
+5.    Comparez les deux exécutions.
+
+
+comparer l'execution de tout les modèle xtrain & xtest // avec un cas avec les dummies & l'autre sans les demies 
