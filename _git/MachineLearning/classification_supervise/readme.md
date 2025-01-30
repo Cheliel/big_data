@@ -100,12 +100,43 @@ Ici on va faire 5 essaie différents avec des traitement différents
 
 
 
+## la même avec d'autre données 
+
+
+1. lire le fichier => ok
+
+2. gérer les valeurs nul => ok
+
+3. faire l'execution d'initial (avant le TP) => ok 
+
+
+4. One hot (valeur présente 0/1) encoder
+
+Mettre 0 / 1 si la valeur est présente 
+
+``` python
+df_dummies = pd.get_dummies(donnees, columns=variableQualitatives, drop_first=True)
+```
+
+**=> Permet de donner le même poids à chaque valeurs (colonne) car chaque colonnes a le même nombre d'entré**
 
 
 
+# Classification binaire 
 
 
+- traitement initial 
 
+ >double train test split (découper en trois partie)
+
+ 1 train test split => 1024
+
+ partie gauche (train) train test split (0.20%)
+
+ tt les colonne sont qualitatives => transformé en modalité (features) => get dummies sur x 
+
+
+- traitement transformer en modalité 
 
 
 
