@@ -171,3 +171,47 @@ df_dummies = pd.get_dummies(donnees, columns=variableQualitatives, drop_first=Tr
 
 
 comparer l'execution de tout les modèle xtrain & xtest // avec un cas avec les dummies & l'autre sans les demies 
+
+
+
+# Titre du cours 
+
+
+## Echantillonage 
+
+### Le sur apprentissage 
+
+>Quand on choix nos algo, on le fait par rapport au meilleurs résultat obtenu en comparaison avec notre jeu de test. le problème c'est qu'on optimise nos algo pour notre jeu de test et cela peut crée un biais. On peut très bien optimiser / paramettre notre jeu de données pour nos données de test et se retrouver avec un modèle qui est très bon pour notre jeu de test bien que nul en général.  
+
+### Stratification 
+
+
+Il peut arriver qu'après le découpage des données une colonnes soit manquant dans un des quatre data sets. 
+
+
+### Validation 
+
+
+Notre jeu de test est peut être particulier, on ne peut pas le savoir à l'avance. C'est pourquoi on conserve un jeu de validation.
+
+1 - on divise l'échantillon traitement en 5 (précédement divisé en validation & test)
+
+2 - c'est la validation croisée, on fait des test sur ce nouveau jeu de données par batch (petit groupe de 1/5 du totale)
+
+3 - Il faut calculer le taux de d'erreur de chaque l'ago puis vérifier s'il reste identique quand on va le tester sur les jeu de validation croisée  
+
+4 - cela permet de s'assurer que la réussite de notre algo n'est pas basé sur la taille de notre jeu de test
+
+
+### Matrice de confusion 
+
+
+### La courge ROC (courbe)
+
+Après avoir calculé la matrice de confusion, on peut calculer la courbe roc. 
+
+La matrice de confusion est renséigner en 0/1 les algorythme donnes des prédictions en % d'acceptabilité. En faisant varier le seuil de pourcentage acceptabilité, on peut remplir une multitude de matrice de confusion. 
+
+l'enssemble de ses matrice nous donne une suite de point qui nous permet de remplir notre courge roc. 
+
+

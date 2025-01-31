@@ -6,3 +6,12 @@
 Ces algorithmes utilise les distances entre les valeurs : 
 
 single => statu
+
+
+
+
+## TP 
+
+> charger le doucoument 
+
+> 
