@@ -3,7 +3,7 @@
 ```mermaid
 erDiagram
 
-    D_time          ||--|| H_time                    : Hierarchie
+     D_time          ||--|| H_time                    : Hierarchie
     D_delivery_time ||--|| H_time                    : Hierarchie
     D_customer      ||--|| H_customer                : Hierarchie
     D_product       ||--|| H_product_categorie_name  : Hierarchie
@@ -12,7 +12,8 @@ erDiagram
     D_reviews       ||--|| H_comment                 : Hierarchie
     D_reviews       ||--|| H_answer                  : Hierarchie
     D_reviews       ||--|| H_score                   : Hierarchie
-
+    D_payment       ||--|| H_payment_method          : Hierarchie
+    D_product_size  ||--|| H_product_size_category   : Hierarchie
 
     
     F_Sales           ||--|| D_time                    : Dimension
@@ -21,19 +22,20 @@ erDiagram
     F_Sales           ||--|| D_product                 : Dimension
     F_Sales           ||--|| D_seller                  : Dimension
     F_Sales           ||--|| D_reviews                 : Dimension
+    F_Sales           ||--|| D_payment                 : Dimension
+    F_Sales           ||--|| D_product_size            : Dimension
 
-
+    
     F_Sales {
  
         string order_id PK    
         string customer_id FK
         string customer_unique_id FK
 
-
         float64 approuvee            
         float64 envoyee             
         float64 livree               
-        float64 estimee             
+        float64 estimee              
 
         float64 int_boleto          
         float64 int_credit_card     
@@ -44,6 +46,10 @@ erDiagram
         float64 value_debit_card    
         float64 value_voucher       
 
+        float64 weight_g            
+        float64 length_cm           
+        float64 height_cm           
+        float64 width_cm            
 
         int64 score               
         int32 answer              
@@ -54,7 +60,6 @@ erDiagram
     D_time { 
         datetime purchase_timestamp
     }
-
 
     D_delivery_time {
         datetime approved_at
@@ -77,6 +82,14 @@ erDiagram
 
     D_reviews {
         string order_id
+    }
+
+    D_payment {
+        string order_id
+    }
+
+    D_product_size {
+        string product_id
     }
 
     H_seller {
@@ -124,7 +137,13 @@ erDiagram
         int32 creation_5
     }
 
+    H_payment_method {
+        string payment_type
+    }
 
+    H_product_size {
+        string size_category
+    }
 
     H_product_categorie_name {
         string category_name
