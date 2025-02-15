@@ -3,7 +3,7 @@
 ```mermaid
 erDiagram
 
-     D_time          ||--|| H_time                    : Hierarchie
+     D_time          ||--|| H_time                   : Hierarchie
     D_delivery_time ||--|| H_time                    : Hierarchie
     D_customer      ||--|| H_customer                : Hierarchie
     D_product       ||--|| H_product_categorie_name  : Hierarchie
