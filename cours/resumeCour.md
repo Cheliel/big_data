@@ -1087,3 +1087,95 @@ La fonction de coût est un outil utilisé en Machine Learning pour mesurer l'er
 </table>
 
 
+# 📉 La Descente de Gradient en Machine Learning  
+
+## 🔹 1️⃣ Qu’est-ce que la Descente de Gradient ?  
+
+La **descente de gradient** est une technique d'optimisation utilisée en **Machine Learning** et **Deep Learning** pour **ajuster les paramètres d’un modèle** et **minimiser l’erreur**.  
+
+💡 **L'objectif :** Trouver les **meilleurs paramètres** d’un modèle afin qu’il fasse **les prédictions les plus précises possibles**.  
+
+---
+
+## ⚙️ 2️⃣ Comment fonctionne la Descente de Gradient ?  
+
+📌 **Principe général :**  
+1. Le modèle commence avec **des paramètres initiaux aléatoires**.  
+2. Il **calcule l’erreur** entre la prédiction et la vraie valeur.  
+3. Il **ajuste progressivement les paramètres** pour **réduire l’erreur**, en suivant la pente du terrain des erreurs (le gradient).  
+4. Ce processus se répète jusqu’à **trouver une valeur optimale**.  
+
+💡 **Analogie :**  
+> Imaginez une **balle roulant sur une montagne**. Elle cherche **le point le plus bas** en descendant progressivement la pente. La descente de gradient suit le même principe : **trouver le minimum de l’erreur**.  
+
+---
+
+## 🚀 3️⃣ Types de Descente de Gradient  
+
+<table style="border: 1px solid #444; border-collapse: collapse; width: 100%; color: #fff; background-color: #222;">
+    <thead>
+        <tr style="background-color: #444;">
+            <th style="text-align: left; padding: 10px; border: 1px solid #555;">Type</th>
+            <th style="text-align: left; padding: 10px; border: 1px solid #555;">Description</th>
+            <th style="text-align: left; padding: 10px; border: 1px solid #555;">Avantages & Inconvénients</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #555; font-weight: bold; color: #ffcc00;">Batch Gradient Descent 🏋️‍♂️</td>
+            <td style="padding: 10px; border: 1px solid #555;">Met à jour les paramètres après avoir analysé <b>toutes</b> les données.</td>
+            <td style="padding: 10px; border: 1px solid #555;">
+                ✅ Plus stable 💡<br>
+                ❌ Plus lent sur de grands datasets.
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #555; font-weight: bold; color: #66ff99;">Stochastic Gradient Descent (SGD) ⚡</td>
+            <td style="padding: 10px; border: 1px solid #555;">Met à jour les paramètres après <b>chaque</b> point de données.</td>
+            <td style="padding: 10px; border: 1px solid #555;">
+                ✅ Rapide 💡<br>
+                ❌ Plus de variations (moins stable).
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #555; font-weight: bold; color: #6699ff;">Mini-Batch Gradient Descent 🎯</td>
+            <td style="padding: 10px; border: 1px solid #555;">Met à jour les paramètres après <b>un petit échantillon</b> de données.</td>
+            <td style="padding: 10px; border: 1px solid #555;">
+                ✅ Compromis entre stabilité et rapidité.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+---
+
+## ⚠️ 4️⃣ Problèmes et Solutions  
+
+📌 **1. Convergence trop lente ⏳**  
+💡 **Solution** : Utiliser un **taux d’apprentissage dynamique** (learning rate).  
+
+📌 **2. Blocage dans un minimum local ❌**  
+💡 **Solution** : Utiliser des techniques comme **Momentum** ou **Adam Optimizer** pour mieux explorer l’espace des solutions.  
+
+📌 **3. Oscillations trop fortes 🔄**  
+💡 **Solution** : Régler correctement le **learning rate** pour éviter des sauts trop brusques.  
+
+---
+
+## 🎯 5️⃣ Pourquoi la Descente de Gradient est Importante ?  
+
+✅ **Essentielle pour l’apprentissage des modèles de Machine Learning**  
+✅ **Utilisée dans la majorité des algorithmes de régression et de réseaux neuronaux**  
+✅ **Permet d’entraîner des modèles efficacement même sur des millions de données**  
+
+---
+
+## 📌 6️⃣ Résumé  
+
+- **Descente de Gradient = Technique d’optimisation** pour **réduire l’erreur** d’un modèle.  
+- **Trois types principaux :** Batch, Stochastique (SGD), Mini-Batch.  
+- **Problèmes courants** : apprentissage trop lent, oscillations, minimum local.  
+- **Techniques avancées** : Momentum, Adam, Learning Rate Adaptatif.  
+
+📌 **Sans descente de gradient, l’IA et le Machine Learning ne pourraient pas fonctionner efficacement ! 🚀**  
